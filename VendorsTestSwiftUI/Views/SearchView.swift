@@ -18,11 +18,13 @@ struct SearchView: View {
             TextField("Search...", text: $text)
                 .padding(.horizontal, 12)
                 .foregroundColor(.titleDarkGray)
+                .frame(height: 40)
                 .onChange(of: text) { newValue in
                     didEnterText?(newValue)
                 }
+                .font(.custom(.openSansRegular, size: 16))
             
-            Image(systemName: "magnifyingglass")
+            Image(ImageNameType.iconSearch.rawValue)
                 .frame(width: 32, height: 32, alignment: .center)
                 .foregroundColor(.subTitleLightGray)
                 .padding(.trailing, 8)

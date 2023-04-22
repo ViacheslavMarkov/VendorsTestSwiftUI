@@ -39,12 +39,11 @@ struct ContentView: View {
             )
             .cornerRadius(14)
             .padding(.top, 24)
-            .frame(height: 40)
             .shadow(
-                color: .subTitleLightGray.opacity(0.6),
-                radius: 8,
-                x: 2,
-                y: 2
+                color: .shadowColor,
+                radius: 14,
+                x: 0,
+                y: 6
             )
             
             // MARK: List of items
