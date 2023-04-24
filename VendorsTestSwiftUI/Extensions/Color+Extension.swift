@@ -8,10 +8,9 @@
 import SwiftUI
 
 extension Color {
-    static let backgroundLightGray = Color("BackgroundLightGrayColor")
-    static let subTitleLightGray = Color("SubTitleLightGrayColor")
-    static let titleCustomGray = Color("TitleCustomGrayColor")
-    static let titleDarkGray = Color("TitleDarkGrayColor")
-    static let titleGreen = Color("TitleGreenColor")
-    static let shadowColor = Color("ShadowColor")
+    static let backgroundLightGray  = Color("BackgroundLightGrayColor")
+    static let subTitleLightGray    = Color("SubTitleLightGrayColor")
+    static let titleDarkGray        = Color("TitleDarkGrayColor")
+    static let titleGreen           = Color("TitleGreenColor")
+    static let shadowColor          = Color("ShadowColor")
 }

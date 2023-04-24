@@ -40,7 +40,6 @@ struct VendorCellView: View {
                 Text(item.companyName)
                     .font(.custom(.openSansBold, size: 16))
                     .foregroundColor(.titleDarkGray)
-                    .fontWeight(.bold)
                 
                 Spacer()
             }//: HStack

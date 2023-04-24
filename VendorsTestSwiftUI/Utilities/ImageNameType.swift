@@ -9,4 +9,6 @@ import Foundation
 
 enum ImageNameType: String {
     case iconSearch
+    case unselectedBookmark
+    case selectedBookmark
 }

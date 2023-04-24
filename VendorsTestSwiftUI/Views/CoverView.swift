@@ -13,6 +13,8 @@ struct CoverView: View {
     @State var isSelected: Bool = false
     private let bounds = UIScreen.main.bounds
     
+    private let width = UIScreen.main.bounds.width - 32
+    
     //MARK: - Body
     var body: some View {
         ZStack {
@@ -20,7 +22,8 @@ struct CoverView: View {
                 url: URL(string: item.coverPhoto.mediaUrl)) { image in
                     image
                         .resizable()
-                        .scaledToFit()
+                        .scaledToFill()
+                        .frame(width: width, height: width / 2)
                 } placeholder: {
                     ProgressView()
                 }
@@ -30,27 +33,19 @@ struct CoverView: View {
                         
                         VStack {
                             ZStack {
-                                Button(action: {
-                                    
-                                }, label: {
-                                    Image(systemName: "bookmark")
+                                Image(isSelected ? ImageNameType.selectedBookmark.rawValue : ImageNameType.unselectedBookmark.rawValue)
                                         .resizable()
                                         .font(Font.title.weight(.light))
                                         .foregroundColor(!isSelected ? Color.titleGreen : Color.white)
-                                        .frame(width: 10, height: 16)
-                                })//: Button
-                                .frame(width: 36, height: 36)
-                                .cornerRadius(28)
+                                        .frame(width: 64, height: 64)
+                                        .onTapGesture {
+                                            print("Image tapped")
+                                        }
                             }//: ZStack
-                            .background(
-                                isSelected ? Color.titleGreen : Color.white
-                            )
-                            .clipShape(Capsule())
                             
                             Spacer()
                         }//: VStack
                         .padding(.vertical, 10)
-                        .padding(.horizontal, 10)
                     }//: HStack
                 )
                 .overlay {
@@ -60,8 +55,7 @@ struct CoverView: View {
                             
                             ZStack {
                                 Text(item.areaServed)
-                                    .fontWeight(.regular)
-                                    .font(.custom("", fixedSize: 18))
+                                    .font(.custom(.openSansRegular, size: 14))
                                     .foregroundColor(Color.titleDarkGray)
                             }//: ZStack
                             .padding(.vertical, 8)

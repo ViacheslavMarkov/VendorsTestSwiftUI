@@ -24,10 +24,9 @@ struct CategoryView: View {
             Text(category.name)
                 .font(.custom(.openSansRegular, size: 14))
                 .foregroundColor(.titleDarkGray)
-                .fontWeight(.regular)
         }//: HStack
         .padding(.horizontal, 8)
-        .padding(.vertical, 4)
+        .padding(.leading, -8)
     }
 }
 

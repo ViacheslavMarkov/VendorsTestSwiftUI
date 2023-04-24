@@ -16,6 +16,7 @@ struct EmptyMessageView: View {
     var body: some View {
         VStack {
             Spacer()
+            
             Text(title)
                 .padding(.horizontal, 16)
                 .font(.custom(.openSansBold, size: 24))

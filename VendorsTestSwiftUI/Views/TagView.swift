@@ -26,8 +26,7 @@ struct TagView: View {
     //MARK: - Body
     var body: some View {
         Text(createText())
-            .font(.custom(.openSansSemibold, size: 14))
-            .fontWeight(.semibold)
+            .font(.custom(.openSansRegular, size: 14))
             .foregroundColor(.subTitleLightGray)
             .lineLimit(0)
     }
